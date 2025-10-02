@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+header {
+  height: auto;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.header-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header a{
+  text-decoration: none;
+}
+
+.logo {
+  padding: 0;
+}
+
+.logo img {
+  height: 10vh;
+  /* margin-left: 2vw;  */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.texto {
+  max-width: 50%;
+}
+
+.texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.texto a{
+  text-decoration: none;
+}
+
+.icons img {
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.imagem {
+  width: 500px;
+  max-width: 100%;
+}
+
+
+.balanco {
+  animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+section.ondas-box{
+  position: relative;
+  width: 100%;
+  height: 75vh;
+}
+
+.onda{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-image: url('../img/onda.png');
+  background-size: 1000px 100px;
+
+  animation: ondaAnimada 5s ease-in-out infinite alternate;
+}
+
+@keyframes ondaAnimada {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+#onda1{
+  z-index: 1000;
+  opacity: 1;
+  background-position-x: 400px;
+}
+
+#onda2{
+  z-index: 999;
+  opacity: 0.5;
+  background-position-x: 300px;
+}
+
+#onda3{
+  z-index: 998;
+  opacity: 0.2;
+  background-position-x: 200px;
+}
+
+#onda4{
+  z-index: 997;
+  opacity: 0.8;
+  background-position-x: 100px;
+}
+
+section.conteudo{
+  padding: 20px 0px 100px 0px;
+  background-color: #00002A;
+}
+
+.conteudo, .projetos h1, .ferramentas h1, p{
+ text-align: center;
+}
+
+.conteudo h1, .projetos h1, .ferramentas h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card{
+  font-size: 1rem;
+  /* border: 1px solid #fff; */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1; /* mantém forma quadrada*/
+  margin: 10px;
+  padding: 20px 30px 30px 30px;
+}
+
+.card h1, h2{
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.card h1 {
+  color: #522FB8;
+}
+
+.card h2 {
+   color: #4BFF80;
+}
+
+.card img {
+  width: 90px;
+  max-width: 100%;
+}
+
+.card1 ul{
+  margin-top: 50px;
+}
+
+.card2 ul{
+  margin-top: 25px;
+}
+
+.card ul li{
+  list-style: none;
+}
+
+.card1, .card2{
+   box-shadow: 0 2px 5px 5px #522FB8;
+}
+
+
+
+
+/*Estilização dos slides*/
+
+ .projetos {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 100px 16px 200px 0px;
+      background-color: #000020;
+    }
+
+    .swiper-container {
+      max-width: 980px;
+      width: 100%;
+      padding: 30px 0;
+      border-radius: 12px;
+      position: relative; 
+      overflow: visible;  /* permite que slides "sobresaiam" */
+    }
+
+    /* wrapper - centraliza verticalmente slides */
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      background: #000020;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 140px;       
+      height: 360px;        
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* imagem ocupa a parte superior do cartão */
+    .slide-content img {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
+
+    /* área de texto e botão */
+    .slide-info {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      border-radius: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slide-info .meta {
+      display: block;
+      color: #444;
+      font-size: 12px;
+    }
+
+    .slide-info h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #fff;
+      letter-spacing: 0.2px;
+      margin-bottom: 10px;
+    }
+
+    .slide-info p {
+      margin: 0;
+      font-size: 13px;
+      color: #4BFF80;
+      font-weight: 600;
+    }
+
+    .slide-info a {
+      /* display: inline-block; */
+      background: #000;
+      color: #fff;
+      padding: 15px 12px 10px 10px;
+      border-radius: 16px;
+      text-decoration: none;
+      text-align: center;
+      justify-content: center;
+      width: 60%;
+      height: 50px;
+      box-sizing: border-box;
+    }
+
+    /* .btn a{
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+    } */
+
+/*Estilização ferramentas*/
+.ferramentas {
+  width: 100%;
+  padding: 100px 0px 0px 0px;
+  background-color: #00002A;
+}
+
+.ferramentas p{
+  font-size: 1.5rem;
+}
+
+.habilidades h1{
+    display: none;
+}
+
+.container{
+    position: relative;
+    margin: 0px 0px 0px 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .hab{
+    position: relative;
+    width: 280px;
+    height: 200px;
+    margin: 30px;
+    left: 3.9%;
+    transform: translateX(-10%);
+    box-shadow: 0px 0px 50px #522FB8;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Conteúdo inicial */
+.container .hab .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(25%); /* Mantém a imagem no centro */
+}
+
+/* Texto inicialmente invisível */
+.container .hab .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+/* Imagem inicial no centro e animada */
+.container .hab .content img{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 0; 
+    transition: 0.5s;
+    width: 130px;
+    max-width: 100%;
+}
+
+/* Ao passar o cursor */
+.container .hab:hover .content img{
+    transform: translateY(-300px); 
+}
+
+/* aparece o texto */
+.container .hab:hover .content p{
+    opacity: 1;
+    transform: translateY(-120px); 
+}
+
+
+
+
+/*Estilização certificados*/
+.certificados {
+  padding: 50px 0;
+  background-color: #000020;
+  display: flex;
+  flex-direction: column; /* fica um embaixo do outro */
+  align-items: center;    
+  gap: 20px;              /* espaço entre os cards */
+}
+
+.box-certificados{
+  display: flex;
+  flex-direction: column; /* fica um embaixo do outro */
+  align-items: center;    
+  gap: 20px;
+  width: 80%;
+
+  overflow:hidden;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.box-certificados::-webkit-scrollbar{
+    width: 10px;
+    background-color: #522FB8;
+    border-radius: 10px
+}
+
+.box-certificados::-webkit-scrollbar-thumb{
+    background-color: #4BFF80;
+    border-radius: 10px;
+}
+
+.certificados .box{
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 60%;
+}
+
+.certificados p{
+  text-align: justify; 
+  margin-top: 10px; 
+}
+
+/* .certificados img{
+  float: left;
+  margin: 15px;
+} */
+
+.certificados .box h1{
+  color: #522FB8;
+  font-size: 1.5rem;
+}
+
+.certificados h2{
+  color: #4BFF80;
+  font-size: 1rem;
+}
+
+.box{
+   box-shadow: 5px 0px 15px 5px #522FB8;
+}

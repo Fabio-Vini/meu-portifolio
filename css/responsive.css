@@ -1,0 +1,43 @@
+@media (max-width: 480px) {
+  .texto h2 {
+    font-size: 2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+  .conteudo h1 {
+    font-size: 2rem;
+  }
+
+  .icons img {
+    width: 25px;
+    margin: 0 5px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto {
+    max-width: 100%;
+  }
+
+  .imagem {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+
+ /* responsividade dos slides */
+    @media (max-width: 740px) {
+      .swiper-slide { width: 200px; height: 320px; }
+      .slide-content img { height: 180px; }
+      .swiper-button-prev { left: -8px; }
+      .swiper-button-next { right: -8px; }
+    }
